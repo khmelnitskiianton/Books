@@ -1,6 +1,6 @@
 # Books
 
-Here my materials for studing
+Учебники, билеты, конспекты и домашки
 
 # Labs
 
