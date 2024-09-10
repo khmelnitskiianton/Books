@@ -1,0 +1,203 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[a4paper,top=1.5cm, bottom=1.5cm, left=1cm, right=1cm]{geometry}
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{array}
+
+\usepackage{wrapfig}
+\usepackage{siunitx} % Required for alignment
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\graphicspath{{img/}}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{ФРКТ}
+\fancyhead[R]{Эффект Холла}
+\fancyfoot[C]{Артем Шилов}
+
+\title{\begin{center}Лабораторная работа №3.3.4\end{center}
+Эффект Холла в полупроводниках}
+\author{Шилов Артем Витальевич\\}
+\date{Сентябрь 2024}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \maketitle
+    
+
+\section{Обработка результатов}
+\subsection{Градуировка электромагнита}
+Рассчитаем индукцию магнитного поля B для каждого значения тока и построим график зависимости B = $f(I_\text{м}$):
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+I, мА & $\Delta$ Ф, мВб\ & B, Тл \\ \hline
+0     & 0,2                                     & 0,026                         \\ \hline
+0,27  & 2                                       & 0,26                          \\ \hline
+0,4   & 3,1                                     & 0,413                         \\ \hline
+0,5   & 3,7                                     & 0,493                         \\ \hline
+0,63  & 4,6                                     & 0,613                         \\ \hline
+0,7   & 5,2                                     & 0,693                         \\ \hline
+0,8   & 5,7                                     & 0,76                          \\ \hline
+0,9   & 6,4                                     & 0,853                         \\ \hline
+\end{tabular}
+\end{center}
+Построим график зависимости B($I_\text{м}$), где зависимость имеет вид B$(I_\text{м}) = -0.05I^2 + 0.9745I + 0.02 $:
+\begin{center}
+    \includegraphics[width=0.75\linewidth]{3.3.4_График.jpg}
+    \caption{Рис. 1}
+    \label{fig:enter-label}
+\end{center}
+
+\maketitle
+\subsection{Измерение ЭДС Холла}
+Для разных значений I через образец снимем значение ЭДС Холла от тока $I_\text{м}$ через электромагнит. И затем результаты измерений занесем в таблицу:
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+$I_0$ = 0,3 mA & $U_0$ = 0,122 mV & $I_0$ = 0,4 mA & $U_0$ = 0,163 mV & $I_0$ = 0,5 mA & $U_0$ = 0,205 mV \\ \hline
+I, A           & $U_3_4$, mV      & I, A           & $U_3_4$, mV      & I, A           & $U_3_4$, mV      \\ \hline
+0              & 0,204            & 0              & 0,274            & 0              & 0,348            \\ \hline
+0,1            & 0,567            & 0,1            & 0,742            & 0,1            & 0,960            \\ \hline
+0,19           & 0,940            & 0,21           & 1,359            & 0,2            & 1,584            \\ \hline
+0,3            & 1,36             & 0,3            & 1,836            & 0,3            & 2,886            \\ \hline
+0,4            & 1,76             & 0,4            & 2,345            & 0,4            & 2,904            \\ \hline
+0,5            & 2,163            & 0,5            & 2,85             & 0,5            & 3,562            \\ \hline
+0,6            & 2,533            & 0,6            & 3,389            & 0,6            & 4,184            \\ \hline
+0,7            & 2,896            & 0,7            & 3,847            & 0,7            & 4,784            \\ \hline
+0,8            & 3,215            & 0,8            & 4,283            & 0,8            & 5,382            \\ \hline
+0,9            & 3,555            & 0,9            & 4,722            & 0,9            & 5,890            \\ \hline
+\end{tabular}
+\end{center}
+
+\\
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+$I_0$ = 0,6 mA & $U_0$ = 0,275 mV & $I_0$ = 0,7 mA & $U_0$ = 0,280 mV & $I_0$ = 0,8 mA & $U_0$ = 0,332 mV \\ \hline
+I, A           & $U_3_4$, mV      & I, A           & $U_3_4$, mV      & I, A           & $U_3_4$, mV      \\ \hline
+0              & 0,412            & 0              & 0,482            & 0              & 0,551            \\ \hline
+0,1            & 1,176            & 0,1            & 1,3              & 0,1            & 1,514            \\ \hline
+0,2            & 1,92             & 0,2            & 2,295            & 0,2            & 2,6              \\ \hline
+0,3            & 2,756            & 0,3            & 3,172            & 0,3            & 3,623            \\ \hline
+0,4            & 3,54             & 0,4            & 4,152            & 0,4            & 4,77             \\ \hline
+0,5            & 4,38             & 0,5            & 5,075            & 0,5            & 5,745            \\ \hline
+0,6            & 5,08             & 0,6            & 5,889            & 0,6            & 6,7              \\ \hline
+0,7            & 5,858            & 0,7            & 6,813            & 0,7            & 7,648            \\ \hline
+0,8            & 6,487            & 0,8            & 7,509            & 0,8            & 8,616            \\ \hline
+0,9            & 7,165            & 0,9            & 8,339            & 0,9            & 9,40             \\ \hline
+\end{tabular}
+\end{center}
+
+Поменяем полярность электромагнита:
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+$I_0$ = 1 mA & $U_0$ = 0,416 mV \\ \hline
+I, A         & $U_3_4$, mV      \\ \hline
+0            & 0,143            \\ \hline
+0,1          & -1,03            \\ \hline
+0,2          & -2,32            \\ \hline
+0,3          & -3,7             \\ \hline
+0,4          & -5,0             \\ \hline
+0,5          & -6,253           \\ \hline
+0,6          & -7,483           \\ \hline
+0,7          & -8,566           \\ \hline
+0,8          & -9,704           \\ \hline
+0,9          & -10,614          \\ \hline
+\end{tabular}
+\end{center}
+Теперь вычислим значение $\epsilon_x$ по разности показаний вольтметра и сопоставим токи в электромагните с соответствующими значениями индукции магнитного поля. И затем, полученные результаты занесем в таблицу: \\
+
+\begin{center}
+\begin{tabular}{|ll|ll|ll|ll|}
+\hline
+\multicolumn{2}{|l|}{$I_0$ = 0,3 mA}            & \multicolumn{2}{l|}{$I_0$ = 0,4 mA}            & \multicolumn{2}{l|}{$I_0$ = 0,5 mA}            & \multicolumn{2}{l|}{$I_0$ = 0,6 mA}            \\ \hline
+\multicolumn{1}{|l|}{B, мТл} & $\epsilon_x$, мВ & \multicolumn{1}{l|}{B, мТл} & $\epsilon_x$, мВ & \multicolumn{1}{l|}{B, мТл} & $\epsilon_x$, мВ & \multicolumn{1}{l|}{B, мТл} & $\epsilon_x$, мВ \\ \hline
+\multicolumn{1}{|l|}{20}     & 0,082            & \multicolumn{1}{l|}{20}     & 0,111            & \multicolumn{1}{l|}{20}     & 0,143            & \multicolumn{1}{l|}{20}     & 0,137            \\ \hline
+\multicolumn{1}{|l|}{116,9}  & 0,445            & \multicolumn{1}{l|}{116,9}  & 0,579            & \multicolumn{1}{l|}{116,9}  & 0,755            & \multicolumn{1}{l|}{116,9}  & 0,901            \\ \hline
+\multicolumn{1}{|l|}{212}    & 0,818            & \multicolumn{1}{l|}{212}    & 1,196            & \multicolumn{1}{l|}{212}    & 1,379            & \multicolumn{1}{l|}{212}    & 1,645            \\ \hline
+\multicolumn{1}{|l|}{306,5}  & 1,238            & \multicolumn{1}{l|}{306,5}  & 1,673            & \multicolumn{1}{l|}{306,5}  & 2,681            & \multicolumn{1}{l|}{306,5}  & 2,481            \\ \hline
+\multicolumn{1}{|l|}{400}    & 1,638            & \multicolumn{1}{l|}{400}    & 2,182            & \multicolumn{1}{l|}{400}    & 2,699            & \multicolumn{1}{l|}{400}    & 3,265            \\ \hline
+\multicolumn{1}{|l|}{492,5}  & 2,041            & \multicolumn{1}{l|}{492,5}  & 2,687            & \multicolumn{1}{l|}{492,5}  & 3,357            & \multicolumn{1}{l|}{492,5}  & 4,105            \\ \hline
+\multicolumn{1}{|l|}{584}    & 2,411            & \multicolumn{1}{l|}{584}    & 3,226            & \multicolumn{1}{l|}{584}    & 3,979            & \multicolumn{1}{l|}{584}    & 4,805            \\ \hline
+\multicolumn{1}{|l|}{674,5}  & 2,774            & \multicolumn{1}{l|}{674,5}  & 3,684            & \multicolumn{1}{l|}{674,5}  & 4,579            & \multicolumn{1}{l|}{674,5}  & 5,583            \\ \hline
+\multicolumn{1}{|l|}{764}    & 3,093            & \multicolumn{1}{l|}{764}    & 4,12             & \multicolumn{1}{l|}{764}    & 5,177            & \multicolumn{1}{l|}{764}    & 6,212            \\ \hline
+\multicolumn{1}{|l|}{852,5}  & 3,433            & \multicolumn{1}{l|}{852,5}  & 4,559            & \multicolumn{1}{l|}{852,5}  & 5,685            & \multicolumn{1}{l|}{852,5}  & 6,89             \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|ll|ll|ll|}
+\hline
+\multicolumn{2}{|l|}{$I_0$ = 0,7 mA}            & \multicolumn{2}{l|}{$I_0$ = 0,8 mA}            & \multicolumn{2}{l|}{$I_0$ = 1 mA}              \\ \hline
+\multicolumn{1}{|l|}{B, мТл} & $\epsilon_x$, мВ & \multicolumn{1}{l|}{B, мТл} & $\epsilon_x$, мВ & \multicolumn{1}{l|}{B, мТл} & $\epsilon_x$, мВ \\ \hline
+\multicolumn{1}{|l|}{20}     & 0,202            & \multicolumn{1}{l|}{20}     & 0,219            & \multicolumn{1}{l|}{20}     & 0,273           \\ \hline
+\multicolumn{1}{|l|}{116,9}  & 1,02             & \multicolumn{1}{l|}{116,9}  & 1,182            & \multicolumn{1}{l|}{116,9}  & 1,446           \\ \hline
+\multicolumn{1}{|l|}{212}    & 2,015            & \multicolumn{1}{l|}{212}    & 2,268            & \multicolumn{1}{l|}{212}    & 2,736           \\ \hline
+\multicolumn{1}{|l|}{306,5}  & 2,895            & \multicolumn{1}{l|}{306,5}  & 3,291            & \multicolumn{1}{l|}{306,5}  & 4,116           \\ \hline
+\multicolumn{1}{|l|}{400}    & 3,872            & \multicolumn{1}{l|}{400}    & 4,438            & \multicolumn{1}{l|}{400}    & 5,416           \\ \hline
+\multicolumn{1}{|l|}{492,5}  & 4,795            & \multicolumn{1}{l|}{492,5}  & 5,413            & \multicolumn{1}{l|}{492,5}  & 6,669           \\ \hline
+\multicolumn{1}{|l|}{584}    & 5,609            & \multicolumn{1}{l|}{584}    & 6,368            & \multicolumn{1}{l|}{584}    & 7,899           \\ \hline
+\multicolumn{1}{|l|}{674,5}  & 6,533            & \multicolumn{1}{l|}{674,5}  & 7,316            & \multicolumn{1}{l|}{674,5}  & 8,982           \\ \hline
+\multicolumn{1}{|l|}{764}    & 7,229            & \multicolumn{1}{l|}{764}    & 8,284            & \multicolumn{1}{l|}{764}    & 10,12           \\ \hline
+\multicolumn{1}{|l|}{852,5}  & 8,059            & \multicolumn{1}{l|}{852,5}  & 9,068            & \multicolumn{1}{l|}{852,5}  & 11,03           \\ \hline
+\end{tabular}
+\end{center}
+По полученным данным построим график зависимости $\epsilon_x(B)$ для различных значений $I$:
+\begin{center}
+    \includegraphics[width=0.75\linewidth]{3.3.4-График.png}
+    \caption{Рис.2}
+    \label{fig:enter-label}
+\end{center}
+Апроксимируем наши данные зависимостью: $\epsilon_x = a * I + b$ и построим на основе этих данных таблицу: 
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+I, мА & a(I) * $10^-^3$, В/Тл & $\sigma_a$ * $10^-^3$, В/Тл \\ \hline
+0,3   & 0,004                 & 0,0001                    \\ \hline
+0,4   & 0,0054                & 0,0003                    \\ \hline
+0,5   & 0,0066                & 0,0005                    \\ \hline
+0,6   & 0,0082                & 0,0008                    \\ \hline
+0,7   & 0,0095                & 0,0010                    \\ \hline
+0,8   & 0,0108                & 0,0012                    \\ \hline
+1     & 0,013                 & 0,0015                    \\ \hline
+\end{tabular}
+\end{center}
+Далее построим график зависимости a(I):
+\begin{center}
+    \includegraphics[width=0.75\linewidth]{3.3.4-График.2.png}
+    \caption{Рис. 3}
+    \label{fig:enter-label}
+\end{center}
+Аппроксимируя a = b*I мы получили значение: 
+$$b = (130 \pm 2) * 10^-^3 \frac{\text{В}}{\text{Тл * А}}$$
+Тогда, согласно тому, что d = 1 мм - толщина исследуемого образца. После вычислений получаем:
+$$R_x = (260 \pm 7) * 10^-^6 \frac{\text{В * м}}{\text{Тл * А}}$$
+И уже отсюда найдем концентрацию зарядов:
+$$n = (240 \pm 6) * 10^1^9 \text{м}^-^3$$
+\subsection{Расчет удельной проводимости и подвижности}
+В ходе измерений мы получили $U_3_5 = 82,73$ мВ, $L_3_5 = 15$ мм и $l = 8$ мм. Получим удельную проводимость по формуле $\sigma = \frac{L_3_5  I}{U_3_5  d  l}$:
+$$\sigma = 11,33 \pm 0,1 \text{ Ом} * \text{м}^-^1$$
+А также зная характеристики расчитаем подвижность заряда по формуле $b = \frac{\sigma}{e n}$:
+$$b = 2950 \pm 30 \frac{ \text{см}^2}{\text{В * с}} $$
+\section{Вывод}
+В ходе лабораторной работы был исследован эффект Холла в проводниках. Тип проводимости оказался электронным. Тажке была вычислена подвижность электрона в германии $b$, но она отличается от табличной $b_i = 3900 \frac{ \text{см}^2}{\text{В * с}}$, что может свидетельствовать о наличии примесей. Также ощутимый вклад в ошибку полученных данных может внести зависимость характеристик исследуемого образца от температуры, которая могла значительно изменяться в силу
+прохождения через образец электрического тока.
+\end{document}

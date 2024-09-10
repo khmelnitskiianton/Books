@@ -28,9 +28,9 @@ save_pic = "./graphic.png"
 
 #========================================================================================
 _, ax = plt.subplots(figsize=(10, 10))
-ax.set_xlabel("Подпись оси X", fontweight="bold")
-ax.set_ylabel("Подпись оси Y", fontweight="bold")
-ax.set_title("Шапка", fontweight="bold")
+ax.set_xlabel("Подпись оси $X$", fontweight="bold") #You can write Latex formulas
+ax.set_ylabel("Подпись оси $Y$", fontweight="bold")
+ax.set_title("График $x(y)$", fontweight="bold")
 
 ax.xaxis.set_major_locator(ticker.MaxNLocator(10))
 ax.xaxis.set_minor_locator(ticker.MaxNLocator(10))
@@ -70,7 +70,7 @@ for i in range(len(x)):
 #                 """"""""""""""""""""""
 
 plt.plot(x, y, 'r^', label='')    #triangles with measurments
-plt.plot(x, y_fit, color = 'y', label = f"Прямая с аппроксимацией " r'$\Delta l = a + k \cdot d$' f", k = {k:.3f}, a = {b:.3f}")
+plt.plot(x, y_fit, color = 'y', label = f"Прямая с аппроксимацией " r'$y = b + k \cdot x$' f", k = {k:.3f}, b = {b:.3f}")
 #==========================================================================================
 
 plt.legend()
