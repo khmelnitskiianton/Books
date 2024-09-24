@@ -49,3 +49,32 @@ print("k = ",k)
 print("\sigma_k = ", sigma_k)
 print("b = ", b)
 print("\sigma_b = ", sigma_b)
+
+#============================================================
+# Standart deviation!!!!
+
+n = len(x)
+
+summ_x = 0
+summ_x2 = 0
+
+for i in range(n):
+  summ_x += x[i]
+
+sr_x = summ_x/n
+
+standart_otklon = 0
+for i in range(n):
+  standart_otklon += (x[i] - sr_x)**2
+standart_otklon = sqrt(standart_otklon/(n))
+
+standart_pogresh = standart_otklon/sqrt(n)
+
+system_otklon = 0.01 #ввести
+
+polnaya = sqrt(standart_pogresh**2 + system_otklon**2)
+
+print("Среднее значение = ", sr_x)
+print("Стандартное отклонение = ", standart_otklon)
+print("Стандартная погрешность = ", standart_pogresh)
+print("Полная погрешность = ", polnaya)

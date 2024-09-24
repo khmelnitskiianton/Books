@@ -7,12 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1cl5WqadfRlPH6TmJoW7wx3bD5Sj1SavF
 """
 
-##############################################################################
-#                 USE GOOGLE COLAB TO RUN PROGRAM                            #
-#                https://colab.research.google.com/                          #
-##############################################################################
-
-import matplotlib.pyplot as plt                         #include libs  <DONT CHANGE>
+import matplotlib.pyplot as plt     #include libs  <DONT CHANGE>
 import matplotlib.ticker as ticker
 from scipy.optimize import curve_fit
 from IPython.display import display, Math, Latex
@@ -69,60 +64,10 @@ for i in range(len(x)):
 #                 function need to write <TO CHANGE>
 #                 """"""""""""""""""""""
 
-plt.plot(x, y, 'r^', label='')    #triangles with measurments
-plt.plot(x, y_fit, color = 'y', label = f"Прямая с аппроксимацией " r'$y = b + k \cdot x$' f", k = {k:.3f}, b = {b:.3f}")
+#Change symbols colors and e.t.c check docs for plot
+plt.plot(x, y, 'r^', label='')    #triangles with measurements
+plt.plot(x, y_fit, color = 'y', label = f"Прямая с аппроксимацией: " r'$y = b + k \cdot x$' f", k = {k:.3f}, b = {b:.3f}")
 #==========================================================================================
-
 plt.legend()
-plt.show()
 plt.savefig(save_pic)
-
-##########################################################################################
-#                     COUNTING FALLIBILITY DEPEND ON METHOD Least Squares Method         #
-#                          ONLY FOR y = kx + b                                           #
-##########################################################################################
-
-x_new = []
-y_new = []
-
-file = open('data.txt', 'r')
-while (line := file.readline()):
-  s = line.split()
-  if (len(s) != 0):
-    x_new.append(float(s[0].replace(',','.')))
-    y_new.append(float(s[1].replace(',','.')))
-
-amount = len(x_new)
-
-x_new.sort()
-y_new.sort()
-
-summ_xy = 0
-summ_x  = 0
-summ_y  = 0
-summ_x2 = 0
-summ_y2 = 0
-
-for i in range(amount):
-  summ_xy += x_new[i]*y_new[i]
-  summ_x  += x_new[i]
-  summ_y  += y_new[i]
-  summ_x2 += x_new[i]**2
-  summ_y2 += y_new[i]**2
-
-k=0
-b=0
-
-k = (summ_xy/amount - summ_x/amount*summ_y/amount)/(summ_x2/amount - (summ_x/amount)**2)
-
-sigma_k = 1/(sqrt(amount))*sqrt(((summ_y2/amount - (summ_y/amount)**2)/(summ_x2/amount - (summ_x/amount)**2))-k**2)
-
-b = summ_y/amount - k*(summ_x/amount)
-
-sigma_b = sigma_k * sqrt(summ_x2/amount)
-
-print("k = ",k)
-print("\sigma_k = ", sigma_k)
-print("b = ", b)
-print("\sigma_b = ", sigma_b)
-file.close()
+plt.show()
