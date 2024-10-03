@@ -1,15 +1,14 @@
 # Полезные материалы
 
-+ https://sciprogcentre.github.io/green-courses/laboratory_python.html
-+ https://mydebianblog.blogspot.com/
-+ [Обучалка питону](https://sciprogcentre.github.io/python-scientific-book/student_edition/)
++ [Обучалка питону №1](https://sciprogcentre.github.io/python-scientific-book/student_edition/)
++ [Обучалка питону №2](https://sciprogcentre.github.io/green-courses/laboratory_python.html)
 + [Лучший сайт для теха онлайн](https://www.overleaf.com/)
 + [Сайт для генерации таблиц в тех](https://tablesgenerator.com/) 
 + [Кафедра общефиза МФТИ](https://mipt.ru/education/chair/physics/S_I/lab/)
 + [Функция для аппроксимации](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html)
-+ [Обучалка питону](https://sciprogcentre.github.io/green-courses/laboratory_python.html)
 + [Методичка погрешностей Попов-Носик](https://mipt.ru/upload/medialibrary/111/main.pdf)
 + [Преобразователь скринов в тех](https://snip.mathpix.com)
++ [Блог со статьями](https://mydebianblog.blogspot.com/)
 
 # Gits
 
